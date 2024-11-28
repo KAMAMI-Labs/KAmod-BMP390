@@ -3,10 +3,6 @@
 
 //ino board: ESP32-WROOM-DA Module
 
-//additional wires:
-//BMP280 SDO -> GND
-//BMP280 CSB -> VDD (3,3V)
-
 #include <Wire.h>
 #include <SPI.h>
 #include <Adafruit_BMP3XX.h>
@@ -25,7 +21,7 @@
 #define SPI_SCK       14    //no a 11 - a small mistake in the description on the pcb
 #define SPI_CS        15
 
-TwoWire I2CBMP = TwoWire(0);
+//TwoWire I2CBMP = TwoWire(0);
 Adafruit_BMP3XX bmp390;
 
 int status;
@@ -38,12 +34,7 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, HIGH);
 
-  //Serial.println("ID of 0xFF probably means a bad address, a BMP 180 or BMP 085");
-  //Serial.println("ID of 0x56-0x58 represents a BMP 280");
-  //Serial.println("ID of 0x60 represents a BME 280");
-  //Serial.println("ID of 0x61 represents a BME 680");
-
-  I2CBMP.begin(I2C_SDA, I2C_SCL, 100000);
+  //I2CBMP.begin(I2C_SDA, I2C_SCL, 100000);
 
   status = 0;
   while (status == 0){
