@@ -4,8 +4,8 @@
 //ino board: ESP32-WROOM-DA Module
 
 //additional wires:
-//BMP280 SDO -> GND
-//BMP280 CSB -> VDD (3,3V)
+//BMP390 SDO -> GND
+//BMP390 CSB -> VDD (3,3V)
 
 #include <Wire.h>
 #include <SPI.h>
