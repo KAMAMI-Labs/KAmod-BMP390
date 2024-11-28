@@ -1,4 +1,4 @@
-//example code for KAmodESP32 POW RS485 and KAmod BMP280
+//example code for KAmodESP32 POW RS485 and KAmod BMP390
 //https://wiki.kamamilabs.com/index.php?title=KAmodESP32_POW_RS485_(PL)
 
 //ino board: ESP32-WROOM-DA Module
